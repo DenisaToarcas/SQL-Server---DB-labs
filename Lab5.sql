@@ -211,11 +211,18 @@ go
 select *
 from testViewProjects
 
+create index N_Sponsor_Project on Sponsor_Project(project_id)
+go
+
+drop index N_Sponsor_Project on Sponsor_Project
+
+
+---------------------------------------------------------------------------------------------------
 -- Check indexes on Projects
-EXEC sp_helpindex 'Projects';
+--EXEC sp_helpindex 'Projects';
 
 -- Check indexes on Sponsor_Project
-EXEC sp_helpindex 'Sponsor_Project';
+--EXEC sp_helpindex 'Sponsor_Project';
 
 --they are helpful
 
